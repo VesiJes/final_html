@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDelivery | Головна</title>
+    <link rel="stylesheet" href="style-main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+<body>
+    
+    <section class="section">
+        <header class="header">
+            <div class="logo">
+                <p>Food<span>Delivery</span></p>
+            </div>
+            <div class="nav">
+                <p class="active">Home</p>
+                <a href="./menu/menu.html">Menu</a>
+                <a href="#about">About Us</a>
+            </div>
+            <div class="join">
+                <button class="btn-login">Увійти</button>
+                <button class="btn-register">Реєстрація</button>
+            </div>
+        </header>
+
+        <h2 class="block-title">Гарячі пропозиції</h2>
+
+        <div class="swiper">
+            <div class="swiper-wrapper hot-dish">
+                
+
+                <div class="swiper-slide">
+                    <div class="dish-preview">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Піца">
+                        <h3>Маргарита XL</h3>
+                        <span class="price">245 грн</span>
+                    </div>
+                </div>
+            
+                <div class="swiper-slide">
+                    <div class="dish-preview">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Бургер">
+                        <h3>Чізбургер</h3>
+                        <span class="price">160 грн</span>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="dish-preview">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400" alt="Суші">
+                        <h3>Сет Філадельфія</h3>
+                        <span class="price">480 грн</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="dish-preview">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" alt="Салат">   
+                    <h3>Салат Цезар</h3>
+                    <span class="price">195 грн</span>
+                </div>
+                </div>
+
+            </div>
+            
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+        
+        <h2 class="block-title" id="about"> Наша зона доставки</h2>
+        <div class="map">
+            <div class="map-info">
+                <h3>Доставляємо за 30 хвилин!</h3>
+                <p>Якщо не встигнемо — доставка безкоштовна. Працюємо з 10:00 до 22:00 щодня.</p>
+            </div>
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d81250.68652458428!2d30.5234!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">
+                <p>Food<span>Delivery</span></p>
+            </div>
+            <p class="brand-text">Найшвидша доставка гарячої їжі у твоєму місті. Свіжі інгредієнти та висока якість кожного замовлення.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Навігація</h4>
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="./menu/menu.html">Меню</a></li>
+                <li><a href="#about">Про нас</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contacts">
+            <h4>Контакти</h4>
+            <ul>
+                <li>+38 (099) 123-45-67</li>
+                <li>вул. Хрещатик, 1, Київ</li>
+                <li>support@fooddelivery.ua</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Лінія копірайту -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 FoodDelivery. Всі права захищені.</p>
+    </div>
+</footer>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</body>
+</html>
+<script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, 
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>

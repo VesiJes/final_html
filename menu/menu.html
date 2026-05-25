@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDelivery | Menu</title>
+    <link rel="stylesheet" href="style-menu.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Food<span>Delivery</span></a>
+
+            <div class="nav">
+                <a href="../main.html">Home</a>
+                <p class="active">Menu</p>
+                <a href="#about">About Us</a>
+            </div>
+
+            <div class="cart-box" id="total">0 грн</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500" alt="Піца">
+                <div class="card-info">
+                    <h3>Маргарита XL</h3>
+                    <p>Класична піца з томатами та моцарелою</p>
+                    <div class="price-row">
+                        <span class="price">245 грн</span>
+                        <button class="btn-add" onclick="add(245)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Бургер">
+                <div class="card-info">
+                    <h3>Чізбургер</h3>
+                    <p>Яловичина, сир чеддер, мариновані огірки</p>
+                    <div class="price-row">
+                        <span class="price">160 грн</span>
+                        <button class="btn-add" onclick="add(160)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" alt="Салат">
+                <div class="card-info">
+                    <h3>Салат Цезар</h3>
+                    <p>Курка гриль, пармезан, соус цезар</p>
+                    <div class="price-row">
+                        <span class="price">195 грн</span>
+                        <button class="btn-add" onclick="add(195)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=500" alt="Суші">
+                <div class="card-info">
+                    <h3>Сет Філадельфія</h3>
+                    <p>Лосось, вершковий сир, авокадо</p>
+                    <div class="price-row">
+                        <span class="price">480 грн</span>
+                        <button class="btn-add" onclick="add(480)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=500" alt="Wok">
+                <div class="card-info">
+                    <h3>Локшина WOK</h3>
+                    <p>З овочами та соусом теріякі</p>
+                    <div class="price-row">
+                        <span class="price">185 грн</span>
+                        <button class="btn-add" onclick="add(185)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="../img/zoran-borojevic--5FECW242og-unsplash.jpg" alt="Паста">
+                <div class="card-info">
+                    <h3>Карбонара</h3>
+                    <p>Бекон, вершки, яєчний жовток, пармезан</p>
+                    <div class="price-row">
+                        <span class="price">215 грн</span>
+                        <button class="btn-add" onclick="add(215)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500" alt="Рамен">
+                <div class="card-info">
+                    <h3>Рамен з куркою</h3>
+                    <p>Яйце, норі, насичений бульйон</p>
+                    <div class="price-row">
+                        <span class="price">220 грн</span>
+                        <button class="btn-add" onclick="add(220)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="../img/christopher-alvarenga-rQX9eVpSFz8-unsplash.jpg" alt="Рис">
+                <div class="card-info">
+                    <h3>Тяхан з креветкою</h3>
+                    <p>Смажений рис, креветки, овочі, кунжут</p>
+                    <div class="price-row">
+                        <span class="price">260 грн</span>
+                        <button class="btn-add" onclick="add(260)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500" alt="Меню">
+                <div class="card-info">
+                    <h3>BBQ Меню</h3>
+                    <p>Бургер BBQ, картопля фрі, соус</p>
+                    <div class="price-row">
+                        <span class="price">290 грн</span>
+                        <button class="btn-add" onclick="add(290)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500" alt="Десерт">
+                <div class="card-info">
+                    <h3>Донат Шоколадний</h3>
+                    <p>З подвійною глазур'ю та посипкою</p>
+                    <div class="price-row">
+                        <span class="price">65 грн</span>
+                        <button class="btn-add" onclick="add(65)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=500" alt="Суп">
+                <div class="card-info">
+                    <h3>Грибний крем-суп</h3>
+                    <p>Печериці, вершки, хрусткі грінки</p>
+                    <div class="price-row">
+                        <span class="price">140 грн</span>
+                        <button class="btn-add" onclick="add(140)">+</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <img src="../img/charity-beth-long-_PaXoN4_2s0-unsplash.jpg" alt="Напій">
+                <div class="card-info">
+                    <h3>Лимонад 0.5</h3>
+                    <p>Домашній з м'ятою та льодом</p>
+                    <div class="price-row">
+                        <span class="price">45 грн</span>
+                        <button class="btn-add" onclick="add(45)">+</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+            <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">
+                <p>Food<span>Delivery</span></p>
+            </div>
+            <p class="brand-text">Найшвидша доставка гарячої їжі у твоєму місті. Свіжі інгредієнти та висока якість кожного замовлення.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Навігація</h4>
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="./menu/menu.html">Меню</a></li>
+                <li><a href="#about">Про нас</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contacts">
+            <h4>Контакти</h4>
+            <ul>
+                <li>+38 (099) 123-45-67</li>
+                <li>вул. Хрещатик, 1, Київ</li>
+                <li>support@fooddelivery.ua</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 FoodDelivery. Всі права захищені.</p>
+    </div>
+</footer>
+    </div>
+
+    <script>
+        let sum = 0;
+        function add(price) {
+            sum += price;
+            document.getElementById('total').innerText = sum + ' грн';
+        }
+    </script>
+</body>
+</html>
