@@ -32,6 +32,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 .nav {
     display: flex;
     gap: 30px;
@@ -52,7 +53,6 @@ header {
     color: var(--primary);
 }
 
-
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
@@ -71,6 +71,10 @@ header {
     border-radius: 50px;
     font-weight: 600;
     transition: 0.2s;
+}
+
+.menu-toggle, .hamburger {
+    display: none;
 }
 
 .container {
@@ -148,6 +152,7 @@ header {
 .btn-add:hover {
     background: #ea580c;
 }
+
 .footer {
     background-color: var(--dark);
     color: var(--white);
@@ -184,7 +189,6 @@ header {
     font-weight: 700;
     position: relative;
 }
-
 
 .footer-links h4::after,
 .footer-contacts h4::after {
@@ -237,6 +241,73 @@ header {
 }
 
 @media (max-width: 768px) {
+    .header-content {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 100;
+        order: 2;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--dark);
+        border-radius: 3px;
+        transition: 0.3s ease;
+    }
+
+    .cart-box {
+        order: 3;
+        padding: 8px 18px;
+        font-size: 0.95rem;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        z-index: 99;
+        text-align: center;
+    }
+
+    .nav p, .nav a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 8px 0;
+    }
+
+    .menu-toggle:checked ~ .nav {
+        display: flex;
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .card-info p {
+        height: auto;
+    }
+
     .footer {
         border-radius: 24px 24px 0 0;
         padding: 40px 0 20px 0;
@@ -255,5 +326,24 @@ header {
     .footer-bottom {
         margin-top: 30px;
         padding: 20px 20px 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .cart-box {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
